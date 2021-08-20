@@ -10,11 +10,7 @@ tsc -v
 Version 4.3.5
 ```
 
-# little tips
-1. https://segmentfault.com/a/1190000039852833
-2. use sence【保持中立，不限定于某一种使用方式】
-    - es module
-    - Common JS
-    - <script> in HTML 
-    - AMD（require.js）、CMD（sea.js）
-   - [ ] webpack 支持多种打包方式输出。
+# usage
+1. npm i jiam-ui
+2. import {Button} from 'jiam-ui'
+3. <Button>test</Button>
