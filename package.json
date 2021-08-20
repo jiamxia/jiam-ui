@@ -1,6 +1,6 @@
 {
   "name": "jiam-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "React components of my",
   "main": "index.js",
   "module": "lib/index.js",
@@ -10,7 +10,10 @@
   "homepage": "",
   "keywords": [
     "react",
-    "component"
+    "component",
+    "react-component",
+    "ui",
+    "frontend"
   ],
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack",
@@ -24,12 +27,12 @@
     "docz:serve": "docz build && docz serve"
   },
   "bugs": {
-    "url": "https://github.com/Revelation2019/pony-react-ui/issues",
+    "url": "https://github.com/jiamxia/jiam-ui/issues",
     "email": "zhousheng_zuel@163.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Revelation2019/pony-react-ui.git"
+    "url": "https://github.com/jiamxia/jiam-ui.git"
   },
   "files": [
     "dist/*",
