@@ -1,3 +1,7 @@
+# 备用镜像源
+- https://registry.npmjs.org/ 
+- http://mirrors.cloud.tencent.com/npm/
+- http://registry.npm.taobao.org/
 # script 说明
 1. npm run build:dev 生成到 dist [非压缩版]
 2. npm run build:prod 生成 dist [压缩版本]

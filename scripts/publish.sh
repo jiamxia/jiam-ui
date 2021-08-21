@@ -1,4 +1,5 @@
 #!/bin/sh
+# Usage: npm run publish beta
 # for npm publish
 
 if [ $1 -eq 'beta'];then

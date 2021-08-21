@@ -1,6 +1,6 @@
 module.exports = {
     skip: {
-      tag: true,
+      tag: false,
     },
     //types为Conventional Commits标准中定义，目前支持
     //https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
@@ -23,7 +23,7 @@ module.exports = {
     issueUrlFormat: "http://jira.cmss.com/browse/{{id}}",
     //server-version自动commit的模板
     releaseCommitMessageFormat:
-      "build: v{{currentTag}}版本发布 \n\nCode Source From: Self Code \nDescription: \nJira: # \n市场项目编号（名称）：",
+      "build: v{{currentTag}} version publish \n\nCode Source From: Self Code \nDescription: \nJira: # \nMarket item number (name）：",
     //需要server-version更新版本号的文件
     bumpFiles: [
       {

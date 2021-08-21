@@ -1,4 +1,5 @@
 #!/bin/sh
+# Usage: npm run testrelease v0.0.3-1
 # About shell cmd params
 # $0 process name
 # $1 the first params
