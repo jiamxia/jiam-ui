@@ -10,7 +10,7 @@ master="main"
 
 git pull origin $master
 echo "Current pull origin $master."
-if [-z $1];then
+if [ -z $1 ];then
 echo "no tag-version input, so default current version plus 1"
 # Auto generate version number and tag
 standard-version

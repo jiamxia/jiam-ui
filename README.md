@@ -22,7 +22,7 @@ Version 4.3.5
 - npm install
 ...write some useful code
 - npm run build
-- npm run test
+- [ ] npm run test
 - npm run release
 - npm login
 - npm run publish

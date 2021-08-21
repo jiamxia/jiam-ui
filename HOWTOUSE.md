@@ -78,3 +78,15 @@ npm version major
 ```
 如果我们发布先行版本，`npm version prepatch` 命令得出的版本号好像就不够规范了，我们只能使用 `npm version 1.0.0-alpha.1` 指定版本号，不过还好，在 npm 6.4.0 之后，我们可以使用 --preid 参数：
 `npm version prerelease --preid=alpha`
+
+# 不小心发错包
+
+```
+>npm dist-tag add jiam-ui@0.0.3 beta
++beta: jiam-ui@0.0.3
+>npm dist-tag add jiam-ui@0.0.2 latest
++latest: jiam-ui@0.0.2
+>npm dist-tag ls jiam-ui
+beta: 0.0.3
+latest: 0.0.2
+```
