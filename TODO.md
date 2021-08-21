@@ -6,3 +6,11 @@
 6. git action 自动部署包
 7. commit 规范
 8. change log 自动生成
+
+值得学习的优秀工具：
+- [ ] [conventional-changelog / standard-version](https://github.com/conventional-changelog/standard-version)
+- [ ] [conventional-changelog / commitlint](https://github.com/conventional-changelog/commitlint)
+- [ ] [lerna/lerna](https://github.com/lerna/lerna)
+
+好东西：
+- [ ][Bash Shell命令行参数的使用](https://blog.csdn.net/geoffreychan/article/details/77823505)
