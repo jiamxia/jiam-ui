@@ -28,3 +28,7 @@ import {Button} from 'jiam-ui'
 - npm run release
 - npm login
 - npm run publish
+
+# info
+- https://www.npmjs.com/package/jiam-ui
+- https://jiamxia.github.io/jiam-ui/

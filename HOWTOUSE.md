@@ -90,3 +90,20 @@ npm version major
 beta: 0.0.3
 latest: 0.0.2
 ```
+# nrm 切换npm镜像源
+- 查看全局镜像 `npm config get registry`
+- 全局设置镜像 `npm config set r_url`
+- 安装 `npm i nrm -g`
+- 查看 `nrm ls`
+- 切换到 `nrm use taobao`
+- 添加镜像源 `nrm add r_name r_url`, like `nrm add tx http://mirrors.cloud.tencent.com/npm/`
+- 删除镜像源 `nrm del r_name`
+- 测速镜像源 `nrm test r_name`
+# docz
+- 安装依赖 `npm install --save-dev docz docz-theme-default docz-plugin-css @emotion/core`
+- docz ：docz核心部分，必须
+- docz-theme-default ：docz默认主题，必须
+- docz-plugin-css ： docz中使用CSS时的额外插件，如果不需要css则非必须
+- @emotion/core ： 文档依赖，必须
+
+- [ ]BUG: TypeError: Cannot read property 'get' of undefined
