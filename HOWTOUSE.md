@@ -18,3 +18,55 @@
 - rimraf 或 del-cli，用来删除文件和目录，实现类似于 rm -rf 的功能；
 - cpr，用于拷贝、复制文件和目录，实现类似于 cp -r 的功能；
 - make-dir-cli，用于创建目录，实现类似于 mkdir -p 的功能；
+
+# git commit需要遵循一定格式，比如：
+
+feat:     A new feature
+fix:      A bug fix
+docs:     Documentation only changes
+style:    Changes that do not affect the meaning of the code (white-space, formatting, missing semi-co
+lons, etc)
+refactor: A code change that neither fixes a bug nor adds a feature
+perf:     A code change that improves performance
+
+# commit 规范配置文件
+学到了一个好方法，一键生成配置文件
+```
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+```
+# husky正确使用姿势：
+1. npm：https://www.npmjs.com/package/husky
+2. 博客：https://juejin.cn/post/6986584081630756877 【前端工程化项目基础配置】
+3. husky 新旧版本差异 https://zhuanlan.zhihu.com/p/366786798
+
+# 自动生成changelog.md
+1. [git commit 、CHANGELOG 和版本发布的标准自动化](https://www.cnblogs.com/zivxiaowei/p/10089201.html)
+#  版本管理
+npm的发包需要遵循语义化版本，一个版本号包含三个部分：MAJOR.MINOR.PATCH，
+
+- MAJOR 表示主版本号，当你做了不兼容的API修改；
+- MINOR 表示次版本号，当你做了向下兼容的功能性新增；
+- PATCH 表示修订号,当你做了向下兼容的问题修正;
+
+我们可以使用npm version 命令来自动修改版本号，比如：
+```
+// version = v1.0.0
+npm version patch
+// v1.0.1
+npm version prepatch
+// v1.0.2-0
+npm version minor
+// v1.1.0
+npm version major
+// v2.0.0
+```
+一般来说还有先行版本，测试版本等，他们这样命名
+```
+3.1.0-beta.0
+3.1.0-alpha.0
+```
+如果我们发布先行版本，`npm version prepatch` 命令得出的版本号好像就不够规范了，我们只能使用 `npm version 1.0.0-alpha.1` 指定版本号，不过还好，在 npm 6.4.0 之后，我们可以使用 --preid 参数：
+`npm version prerelease --preid=alpha`
+
+升级篇:自动更新版本和生成CHANGELOG
+`npm i -g standard-version`

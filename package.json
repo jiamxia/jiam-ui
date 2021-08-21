@@ -22,13 +22,19 @@
     "build:tsc": "tsc -p tsconfig.build.json --target ES5 --outDir lib",
     "build:es": "cpr src/styles lib/styles -o && cpr src/assets lib/assets -o",
     "build": "npm run clean && npm run build:prod && npm run build:dev && npm run build:tsc && npm run build:es",
+    "release": "standard_version",
+    "prepare": "husky install",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --fix --quiet  --ignore-path .gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint:style": "stylelint src/**/*.{css,less,scss} --fix ",
+    "commit": "cz",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve"
   },
   "bugs": {
     "url": "https://github.com/jiamxia/jiam-ui/issues",
-    "email": "jiam927l@163.com"
+    "email": "jiam927@163.com"
   },
   "repository": {
     "type": "git",
@@ -62,6 +68,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@loadable/webpack-plugin": "^5.14.2",
     "@types/classnames": "^2.2.11",
     "@types/react": "^17.0.3",
@@ -81,8 +89,14 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-standard": "^5.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "file-loader": "^6.2.0",
     "gatsby-plugin-sass": "3.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
     "make-dir-cli": "^2.0.0",
     "mini-css-extract-plugin": "^1.4.0",
     "postcss-loader": "^5.2.0",
@@ -91,6 +105,19 @@
     "semver": "^7.3.5",
     "shelljs": "^0.8.4",
     "speed-measure-webpack-plugin": "^1.5.0",
-    "ts-loader": "^8.1.0"
+    "standard-version": "^9.3.1",
+    "ts-loader": "^8.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "prettier": "^2.3.2"
+  },
+  "lint-staged": {
+    "src/**/*.js": "prettier --write --ignore-unknown"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

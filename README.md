@@ -1,10 +1,10 @@
 # ENV
 ```
 node -v
-v12.1.0
+v12.13.0
 
 npm -v
-6.9.0
+6.12.0
 
 tsc -v
 Version 4.3.5
