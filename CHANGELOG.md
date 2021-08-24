@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/jiamxia/jiam-ui/compare/v0.0.3...v0.0.4) (2021-08-24)
+
+
+### Bug修复
+
+* some file grammar ([4a31fb8](http://gitlab.cmss.com/BI/jiam-ui/commit/4a31fb8d9a5ac78a8490c78cf67c08a122e77428))
+
+
+### 文档
+
+* **improve docs and temp bug:** s ([2f05f49](http://gitlab.cmss.com/BI/jiam-ui/commit/2f05f49ad06c4d6e87dcf6f810c4225d27385de1))
+
+
+### 新特性
+
+* add gitpage docs ([6179e5c](http://gitlab.cmss.com/BI/jiam-ui/commit/6179e5ceb37d4b061dffba3c52cb91e9a04471c3))
+* add primary button ([9c44902](http://gitlab.cmss.com/BI/jiam-ui/commit/9c449028787ccf0b1b57725af49297358bac97d2))
+* squashed commit of the following: ([3190ef4](http://gitlab.cmss.com/BI/jiam-ui/commit/3190ef4ba052743c1690fcff2d0e6c0d1825e17c))
+
 ### [0.0.3](https://github.com/jiamxia/jiam-ui/compare/v0.0.2...v0.0.3) (2021-08-21)
 
 
