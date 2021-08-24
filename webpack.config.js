@@ -79,7 +79,7 @@ module.exports = ({
         ]
       },
       {
-        test: /(\.(eot|ttf|woff|woff2)|font)$/,
+        test: /(\.(eot|ttf|woff|woff2|otf)|font)$/,
         loader: 'file-loader',
         options: { outputPath: 'fonts/' }
       },
