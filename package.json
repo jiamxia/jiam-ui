@@ -30,7 +30,9 @@
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --fix --quiet  --ignore-path .gitignore",
     "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "lint:style": "stylelint src/**/*.{css,less,scss} --fix ",
-    "commit": "cz"
+    "commit": "cz",
+    "dumi": "cross-env APP_ROOT=dumi dumi dev",
+    "dumi-build": "cross-env APP_ROOT=dumi dumi build"
   },
   "bugs": {
     "url": "https://github.com/jiamxia/jiam-ui/issues",
@@ -49,7 +51,6 @@
   ],
   "dependencies": {
     "classnames": "^2.3.1",
-    "cross-env": "^7.0.3",
     "get-intrinsic": "1.0.1",
     "node-sass": "^5.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
@@ -83,9 +84,11 @@
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.1.1",
     "cpr": "^3.0.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.0",
     "cssnano": "^4.1.10",
     "cz-conventional-changelog": "^3.3.0",
+    "dumi": "^1.1.25",
     "eslint": "7.11.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "14.1.1",
@@ -100,6 +103,8 @@
     "file-loader": "^6.2.0",
     "gatsby-plugin-sass": "3.2.0",
     "husky": "^7.0.1",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
     "lint-staged": "^11.1.2",
     "make-dir-cli": "^2.0.0",
     "mini-css-extract-plugin": "^1.4.0",

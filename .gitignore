@@ -27,5 +27,12 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 package-lock.json
+
 TODO.md
 HOWTOUSE.md
+
+.umi
+
+dumi/.umi/
+dumi/.umi-production/
+dumi/dist/
