@@ -79,6 +79,38 @@ module.exports = ({
         ]
       },
       {
+        test: /\.less$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader // 抽取样式文件，将css样式文件用link标签引入，使用此loader就不需要用style-loader，即使用了也不会有效果
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: devMode ? '[path][name]__[local]' : '[hash:base64:5]'
+              },
+              importLoaders: 2, // 一个css中引入了另一个css，也会执行之前两个loader，即postcss-loader和sass-loader
+            }
+          },
+          {
+            // 使用 postcss 为 css 加上浏览器前缀，防止有一些样式存在兼容性问题
+            loader: 'postcss-loader',
+            options: {
+              // options has an unknown property 'plugins';
+              postcssOptions: {
+                // PostCSS plugin autoprefixer requires PostCSS 8.将autoprefixer降到8.0.0版本
+                plugins: [require('autoprefixer')]
+              }
+            }
+          },
+          {
+            loader: 'less-loader' // 使用 less-loader 将 less 转为 css
+          }
+        ]
+      },
+      {
         test: /(\.(eot|ttf|woff|woff2|otf)|font)$/,
         loader: 'file-loader',
         options: { outputPath: 'fonts/' }
