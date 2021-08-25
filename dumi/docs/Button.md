@@ -17,7 +17,7 @@
  */
 import React from 'react';
 import {Button} from 'jiam-ui';
-export default () => <Button className="primary">按钮</Button>;
+export default () => <Button className="primary">test</Button>;
 ```
 
 ```jsx

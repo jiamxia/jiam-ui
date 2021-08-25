@@ -20,3 +20,6 @@ bvchub项目发版更新日志组件，灾难性的扩大，几千行代码。
 
 好东西：
 - [ ] [Bash Shell命令行参数的使用](https://blog.csdn.net/geoffreychan/article/details/77823505)
+
+- 呜呜呜太难了，终于使用dumi进行了组件文档描述了，字体文件的loader处理配置。 参考https://blog.csdn.net/qq_39953537/article/details/107507724 umi 项目增加支持放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录，就比如 vue-cli 的 assetDir
+还有一个dumi好像内部集成了怎么处理less样式，但是好像没有说怎么处理sass文件？odoki
