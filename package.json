@@ -1,6 +1,6 @@
 {
   "name": "jiam-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React components of my",
   "main": "index.js",
   "module": "lib/index.js",
