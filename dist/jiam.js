@@ -1,4 +1,4 @@
-/*! jiam 0.0.5 */
+/*! jiam 0.0.6 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
