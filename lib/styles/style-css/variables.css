@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "SourceHanSansCN-Bold";
+    src: url("../../assets/SourceHanSansCN-Bold.otf");
+}
+
+:root {
+    --main-bg-color: #9363CF; 
+    --main-bg-color-2: #D4C1EC;
+    --main-text-color: #000000;
+    --main-font-family: "SourceHanSansCN-Bold";
+    /* --main-font-family: "Sans-serif"; */
+    --button-md-font-size: 14px;
+    --button-xl-font-size: 20px;
+    --button-lg-font-size: 16px;
+    --button-sm-font-size: 12px;
+}

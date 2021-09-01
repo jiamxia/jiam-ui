@@ -5,6 +5,5 @@
     width: 140px;
     height: 35px;
     border-radius: 100px;
-    font: var(--button-lg-font-size) var(--main-font-family);
-    /* font: var(--button-lg-font-size); */
+    font: var(--button-xl-font-size) var(--main-font-family);
 }
