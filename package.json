@@ -1,6 +1,6 @@
 {
   "name": "jiam-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React components of my",
   "main": "index.js",
   "module": "lib/index.js",
@@ -23,7 +23,8 @@
     "build:es": "cpr src/styles lib/styles -o && cpr src/assets lib/assets -o",
     "build": "npm run clean && npm run build:prod && npm run build:dev && npm run build:tsc && npm run build:es",
     "release": "sh ./scripts/release.sh",
-    "publish": "sh ./scripts/publish.sh",
+    "version": "standard-version",
+    "publish2": "sh ./scripts/publish.sh",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "changeissueurl": "replace 'https://github.com/myproject/issues/' 'https://redmine.example.com/' CHANGELOG.md",
     "prepare": "husky install",
