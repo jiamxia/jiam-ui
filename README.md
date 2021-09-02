@@ -16,7 +16,8 @@ Version 4.3.5
 ```
 npm i jiam-ui
 import {Button} from 'jiam-ui'
-<Button>test</Button>
+import 'jiam-ui/dist/jiam.css'
+<Button className="primary">test</Button>
 ```
 
 # how to do

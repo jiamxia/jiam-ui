@@ -1,6 +1,7 @@
 @font-face {
     font-family: "SourceHanSansCN-Bold";
     src: url("../../assets/SourceHanSansCN-Bold.otf");
+    /* src: url("/fonts/SourceHanSansCN-Bold.otf");  npm run dumi  em?*/
 }
 
 :root {
