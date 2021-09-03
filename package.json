@@ -1,6 +1,6 @@
 {
   "name": "jiam-ui",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "React components of my",
   "main": "index.js",
   "module": "lib/index.js",
@@ -29,13 +29,12 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "changeissueurl": "replace 'https://github.com/myproject/issues/' 'https://redmine.example.com/' CHANGELOG.md",
     "prepare": "husky install",
-    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --fix --quiet  --ignore-path .gitignore",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-    "lint:style": "stylelint src/**/*.{css,less,scss} --fix ",
     "precommit": "lint-staged",
     "commit": "cz",
     "dumi": "cross-env APP_ROOT=dumi dumi dev",
-    "dumi-build": "cross-env APP_ROOT=dumi dumi build"
+    "dumi-build": "cross-env APP_ROOT=dumi dumi build",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:style": "stylelint src/**/*.{css,less,scss} --fix "
   },
   "bugs": {
     "url": "https://github.com/jiamxia/jiam-ui/issues",
@@ -79,6 +78,7 @@
     "@types/react-dom": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
+    "@umijs/fabric": "^2.7.0",
     "acorn": "^8.4.1",
     "autoprefixer": "8.0.0",
     "babel-loader": "^8.2.2",
@@ -119,11 +119,13 @@
     "shelljs": "^0.8.4",
     "speed-measure-webpack-plugin": "^1.5.0",
     "standard-version": "^9.3.1",
+    "stylelint": "^13.13.1",
     "terser-webpack-plugin": "^5.1.4",
     "ts-loader": "^8.1.0"
   },
   "lint-staged": {
-    "src/**/*.js": "prettier --write --ignore-unknown"
+    "src/**/*.js": "prettier --write --ignore-unknown",
+    "src/**/*.{css,less,scss}": "stylelint --fix"
   },
   "config": {
     "commitizen": {
