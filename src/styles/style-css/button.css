@@ -1,4 +1,4 @@
-.primary{
+.primary {
     width: 140px;
     height: 35px;
     color: #fff;
@@ -6,4 +6,16 @@
     background-color: var(--main-bg-color);
     border: none;
     border-radius: 100px;
+    cursor: pointer;
+}
+
+.outline {
+    width: 140px;
+    height: 35px;
+    color: var(--main-bg-color);
+    font: var(--button-lg-font-size) var(--main-font-family);
+    background-color: transparent;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 100px;
+    cursor: pointer;
 }

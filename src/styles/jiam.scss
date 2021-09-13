@@ -1,5 +1,8 @@
-@import './_variables';
-@import './_mixins';
+@import "./_variables";
+@import "./_mixins";
 
-@import './_button';
-@import './style-css/index.css';
+@import "./_button";
+@import "./_loading";
+@import "./_checkbox";
+@import "./_modal";
+@import "./style-css/index.css";

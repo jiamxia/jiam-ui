@@ -6,8 +6,9 @@
 }
 
 :root {
-    --main-bg-color: #9363CF; 
-    --main-bg-color-2: #D4C1EC;
+    --main-bg-color: #9363cf;
+    --main-bg-color-2: #d4c1ec;
+    --main-bg-color-3: #7983ff;
     --main-text-color: #000;
     --main-font-family: "SourceHanSansCN-Bold";
 

@@ -1,0 +1,168 @@
+$width1-1: 100%;
+$width16-9: 56.25%;
+$width4-3: 75%;
+
+.bounce-loading {
+  // background-color:aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 10rem;
+}
+.bounce-loading > div {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  background-color: var(--main-bg-color);
+  border-radius: 0.5rem;
+  animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(2rem);
+    opacity: 0.1;
+  }
+}
+.bounce-loading > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bounce-loading > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+//   旋转小圆圈
+
+.donut-loading {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--main-bg-color);
+  border-radius: 2rem;
+  animation: rotate 1s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//   宽高比固定的div
+.reactive-height {
+  width: 50%;
+  background-color: var(--main-bg-color);
+}
+.reactive-height::before {
+  float: left;
+  padding-top: $width16-9;
+  content: "";
+}
+.reactive-height::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+// 自定义滚动条
+.custom-scrollbar {
+  width: 40rem;
+  height: 7rem;
+  overflow-y: scroll;
+  background-color: aliceblue;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: mediumpurple;
+  border-radius: 10px;
+}
+// ::-webkit-scrollbar-track {
+//   background-color: #333;
+// }
+
+// 自定义文本选择时的样式
+
+.custom-text-selection {
+  width: 50%;
+}
+.custom-text-selection::selection {
+  color: white;
+  background-color: navy;
+}
+// 禁止文本被选中
+.disable-selection {
+  width: 50%;
+  user-select: none;
+}
+// 渐变色文本
+.gradient-text {
+  background: -webkit-linear-gradient(pink, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+//hover 下划线效果 /-从中间开始变化--/左入左出 右入右出
+
+.hover-underline-animation {
+  cursor: pointer;
+}
+.hover-underline-animation::after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #7983ff;
+  transform: scaleX(0);
+  transform-origin: right; //左至右 不加默认从中间
+  transition: transform 0.3s;
+  content: "";
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: left; //左至右
+}
+
+// :not选择器
+
+//滚动容器渐变遮罩
+
+.overflow-scroll-gradient {
+  position: relative;
+}
+.overflow-scroll-gradient::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.001));
+  content: "";
+}
+.overflow-scroll-gradient::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 1));
+  content: "";
+}
+.overflow-scroll-gradient > div {
+  width: 15rem;
+  height: 25rem;
+  overflow-y: scroll;
+}
+
+// 使用系统字体获得原生体验
+.system-font-stack {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}

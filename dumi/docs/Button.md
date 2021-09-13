@@ -22,6 +22,16 @@ export default () => <Button className="primary">test</Button>;
 
 ```jsx
 /**
+ * title: 普通配置
+ * desc: 参考 antd
+ */
+import React from 'react';
+import {Button} from 'jiam-ui';
+export default () => <Button className="outline">test</Button>;
+```
+
+```jsx
+/**
  * title: loading
  * desc: 单loading属性存在时，会将点击方法视为异步，用 await 承接
  */
